@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    .bg { fill: #000000; }
+    .txt { fill: #c8ff00; font-family: system-ui, sans-serif; font-weight: 800; font-size: 64px; }
+  </style>
+  <rect width="100" height="100" rx="22" class="bg"/>
+  <text x="50" y="72" text-anchor="middle" class="txt">M</text>
+</svg>
