@@ -33,8 +33,8 @@
             <div class="orb-stat-lbl">Skills</div>
           </div>
           <div class="orb-stat">
-            <div class="orb-stat-num">3+</div>
-            <div class="orb-stat-lbl">Years</div>
+            <div class="orb-stat-num">1</div>
+            <div class="orb-stat-lbl">Year</div>
           </div>
         </div>
       </div>

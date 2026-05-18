@@ -74,11 +74,15 @@ function closeCarouselImage() {
                     </button>
                   </div>
                   <button v-if="project.images.length > 1"
-                    class="absolute left-4 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center bg-black/60 border border-[var(--line2)] text-white rounded-full backdrop-blur-sm text-xl transition-all z-[2] hover:bg-[var(--accent)] hover:text-[var(--bg)] hover:border-[var(--accent)]"
-                    @click="prevImage(project.num, project.images.length, $event)">‹</button>
+                    class="absolute left-4 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center bg-black/60 border border-[var(--line2)] text-white rounded-full backdrop-blur-sm transition-all z-[2] hover:bg-[var(--accent)] hover:text-[var(--bg)] hover:border-[var(--accent)]"
+                    @click="prevImage(project.num, project.images.length, $event)">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                  </button>
                   <button v-if="project.images.length > 1"
-                    class="absolute right-4 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center bg-black/60 border border-[var(--line2)] text-white rounded-full backdrop-blur-sm text-xl transition-all z-[2] hover:bg-[var(--accent)] hover:text-[var(--bg)] hover:border-[var(--accent)]"
-                    @click="nextImage(project.num, project.images.length, $event)">›</button>
+                    class="absolute right-4 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center bg-black/60 border border-[var(--line2)] text-white rounded-full backdrop-blur-sm transition-all z-[2] hover:bg-[var(--accent)] hover:text-[var(--bg)] hover:border-[var(--accent)]"
+                    @click="nextImage(project.num, project.images.length, $event)">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                  </button>
                   <div v-if="project.images.length > 1"
                     class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-[2] bg-black/40 px-3 py-1.5 rounded-xl backdrop-blur-sm">
                     <button v-for="(_, idx) in project.images" :key="idx"
@@ -112,7 +116,16 @@ function closeCarouselImage() {
             <div class="text-[11px] text-[var(--dim)] mb-2">{{ project.year }}</div>
             <a class="proj-link inline-flex items-center gap-1.5 text-[11px] text-[var(--muted)] no-underline tracking-[1px] uppercase transition-all duration-300 border border-transparent px-3 py-1.5 rounded-sm group-hover:text-[var(--white)] group-hover:translate-x-1"
               href="#" @click.prevent.stop="toggleProject(project.num)">
-              {{ expandedProject === project.num ? 'Close ×' : project.linkLabel }}
+              <template v-if="expandedProject === project.num">
+                Close
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+              </template>
+              <template v-else>
+                {{ project.linkLabel }}
+                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                </svg>
+              </template>
             </a>
           </div>
         </div>
@@ -121,7 +134,9 @@ function closeCarouselImage() {
   </section>
 
   <div v-if="activeCarouselImage" class="fixed inset-0 z-[3000] bg-black/92 flex items-center justify-center p-6" @click.self="closeCarouselImage">
-    <button class="fixed top-5 right-5 w-[42px] h-[42px] rounded-full border border-white/20 bg-black/35 text-white text-[28px] leading-none cursor-pointer" type="button" @click="closeCarouselImage">×</button>
+    <button class="fixed top-5 right-5 w-[42px] h-[42px] flex items-center justify-center rounded-full border border-white/20 bg-black/35 text-white cursor-pointer hover:bg-white/10 transition-colors" type="button" @click="closeCarouselImage">
+      <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+    </button>
     <img :src="activeCarouselImage" alt="Project image full screen" class="max-h-[92vh] object-contain rounded-lg shadow-2xl" style="width:min(96vw,1600px)" />
   </div>
 </template>

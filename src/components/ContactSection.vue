@@ -56,7 +56,7 @@ function downloadCV() {
               <div class="font-[var(--display)] text-xl font-bold text-[var(--white)] transition-colors hover:text-[var(--accent)]">My CV</div>
               <div class="text-xs text-[var(--dim)]">Read or Download</div>
             </div>
-            <div class="text-xl text-[var(--dim)] transition-all hover:text-[var(--accent)] hover:translate-x-1 hover:-translate-y-1">↗</div>
+            <div class="text-xl text-[var(--dim)] transition-all hover:text-[var(--accent)] hover:translate-x-1 hover:-translate-y-1"></div>
           </button>
           
           <!-- Dropdown Menu -->
@@ -88,7 +88,7 @@ function downloadCV() {
             <div class="font-[var(--display)] text-xl font-bold text-[var(--white)] transition-colors hover:text-[var(--accent)]">{{ link.name }}</div>
             <div class="text-xs text-[var(--dim)]">{{ link.handle }}</div>
           </div>
-          <div class="text-xl text-[var(--dim)] transition-all hover:text-[var(--accent)] hover:translate-x-1 hover:-translate-y-1">↗</div>
+          <div class="text-xl text-[var(--dim)] transition-all hover:text-[var(--accent)] hover:translate-x-1 hover:-translate-y-1"></div>
         </a>
       </div>
     </div>

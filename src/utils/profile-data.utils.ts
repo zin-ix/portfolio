@@ -44,7 +44,7 @@ export const projectItems: ProjectItem[] = [
     desc: 'A web-based Procurement Market Scoping System for the Provincial Government of Agusan del Sur BAC procurement workflow, featuring AI-assisted generation of Terms of Reference (TOR) and market analysis reports. Built RESTful APIs using ASP.NET Core and developed a dynamic frontend using Vue.js to improve efficiency, automate document generation, and reduce manual workload.',
     tags: ['Vue.js', 'TypeScript', 'WebSockets', 'SQL Server', 'ASP.NET'],
     year: '2026',
-    linkLabel: 'View ↗',
+    linkLabel: 'View',
     images: [msc1, msc2, msc3, msc4, msc5],
     repoUrl: 'https://github.com/zin-ix/pms-frontend',
     fullDesc: 'Developed to streamline the procurement process, this system automates document generation and market analysis. It connects a robust ASP.NET backend with a highly reactive Vue.js interface, drastically cutting down administrative overhead and improving cross-department efficiency.'
@@ -55,7 +55,7 @@ export const projectItems: ProjectItem[] = [
     desc: 'An RFID-based computer laboratory logging system with student-to-PC mapping and issue reporting features. The system integrates Laravel, Vue.js, Windows Forms, RFID technology, and Espressif Systems ESP32 to automate attendance logging, device monitoring, and laboratory issue management through a centralized platform.',
     tags: ['Vue.js', 'Windows Forms', 'Laravel', 'WebSockets', 'ESP32', 'MySQL'],
     year: '2025',
-    linkLabel: 'GitHub ↗',
+    linkLabel: 'GitHub',
     images: [labtrack1, labtrack2, labtrack3, labtrack4],
     repoUrl: 'https://github.com/zin-ix/labtrack',
     fullDesc: 'LabTrack provides end-to-end laboratory monitoring by mapping students to specific PCs via RFID tags. Its seamless integration of hardware (ESP32) and software (Laravel + Vue.js) enables real-time device tracking and instant issue reporting.'
@@ -66,7 +66,7 @@ export const projectItems: ProjectItem[] = [
     desc: 'A comprehensive solution for managing employee attendance in large organizations. Features include real-time tracking, automated reporting, and integration with existing HR systems.',
     tags: ['Vue.js', 'Laravel', 'MySQL', 'Websockets'],
     year: '2022',
-    linkLabel: 'Docs ↗',
+    linkLabel: 'Docs',
     images: [eams],
     repoUrl: 'https://github.com/zin-ix/Attendance-Management-using-Rfid',
     fullDesc: 'This attendance management tool uses WebSockets for live status updates, allowing HR teams to see employee check-ins in real-time. Paired with automated reporting, it acts as a central hub for personnel time tracking.'
@@ -77,7 +77,7 @@ export const projectItems: ProjectItem[] = [
     desc: 'A lightweight, customizable toast notification library for Vue.js applications. Built with TypeScript and designed for ease of use and flexibility, it supports various notification types, animations, and theming options.',
     tags: ['Open Source', 'TypeScript', 'Vue.Js', 'CSS'],
     year: '2022',
-    linkLabel: 'npm ↗',
+    linkLabel: 'npm',
     images: [featherToastVueImage1, featherToastVueImage2, featherToastVueImage3, featherToastVueImage4],
     repoUrl: 'https://github.com/zin-ix/feather-toast-vue',
     demoUrl: 'https://www.npmjs.com/package/feather-toast-vue',
